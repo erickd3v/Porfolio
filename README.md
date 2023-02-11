@@ -5,7 +5,7 @@ This is a Portfolio created with HTML5, CC3 and JavaScript.
 ## Autor 🖋
 **Erick Moya**
 
-* [LinkeIn](www.linkedin.com/in/DeveloperEM/)
+* [LinkeIn](https://www.linkedin.com/in/developerem/)
 
 ## Ver ejemplo en vivo
 -[ENALEGITHUBPAGES](ENLACEGITHUBPAGES)
