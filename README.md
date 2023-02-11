@@ -1,2 +1,16 @@
-# Porfolio
-Hello my name is Erick web developer, in this portfolio you will be able to see the different projects with which I have been practicing and that I continue to practice constantly.
+## Description
+
+This is a Portfolio created with HTML5, CC3 and JavaScript.
+
+## Autor 🖋
+**Erick Moya**
+
+* [LinkeIn](www.linkedin.com/in/DeveloperEM)
+
+## Ver ejemplo en vivo
+-[ENALEGITHUBPAGES](ENLACEGITHUBPAGES)
+
+## Licencia
+MIT Public License v3.0
+
+No puede usarse comercialmente
