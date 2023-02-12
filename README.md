@@ -1,6 +1,6 @@
 ## Description
 
-This is a Portfolio created with HTML5, CC3 and JavaScript.
+This is a Portfolio created with HTML5, CC3, SASS and JavaScript.
 
 ## Autor 🖋
 **Erick Moya**
