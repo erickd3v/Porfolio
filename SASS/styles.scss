@@ -1,0 +1,26 @@
+@use 'variables';
+@use 'navbar';
+@use 'modal-navbar';
+@use 'carrousel';
+@use 'header';
+@use 'gallery';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: variables.$Font;
+}
+
+.main-container {
+    width: 375px;
+    border: 1px solid black;
+    margin: auto;
+    position: relative;
+    @media (min-width: 1115px) {
+            width: 1115px;
+    }
+}
