@@ -9,3 +9,13 @@
     height: 100%;
     display: none;
 }
+
+@mixin img-btn {
+    background-color: variables.$White;
+        height: 25px;
+        width: 25px;
+        border-radius: 50%;
+        &:hover {
+            cursor: pointer;
+        }
+}

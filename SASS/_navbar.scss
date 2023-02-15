@@ -10,15 +10,21 @@
     }
     &__link {
         text-decoration: none;
-        color: variables.$Dark-grayish-blue;
-        display: block;
-        height: 112px;
-        padding-top: 42px;
+        color: variables.$White;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        height: 30px;
+        width: 80px;
+        font-weight: 700;
+        background-color: variables.$Very-dark-blue;
+        border-radius: 5px;
         &:hover {
-            border-bottom: 4px solid variables.$blue-skie;
+            background-color: black;
         }
     }
-    @media (min-width: 1115px) {
+    @media (min-width: 750px) {
         display: block;
     }
 }

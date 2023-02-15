@@ -1,0 +1,51 @@
+@use 'variables';
+
+.footer {
+    border: 1px solid transparent;
+    margin: 1rem auto 0;
+    width: 100%;
+    background-color: black;
+    &__container {
+        width: 95%;
+        display: flex;
+        justify-content: space-between;
+        margin: 1rem auto 0;
+        padding-bottom: 1rem;
+        @media (min-width: 750px) {
+            align-items: center;
+        }
+    }
+    &__a {
+        text-decoration: none;
+        color: variables.$White;
+        &--img {
+            display: flex;
+            align-items: center;
+            margin-right: 10px;
+        }
+    }
+    &__logo {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        @media (min-width: 750px) {
+            width: 150px;
+            height: 150px;
+        }
+    }
+    &__contact {
+        width: 250px;
+        height: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &--text {
+            display: flex;
+            gap: 5px;
+            font-weight: 550;
+        }
+        @media (min-width: 750px) {
+            height: 100px;
+        }
+    }
+}
