@@ -12,12 +12,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: variables.$Font;
     background-image: url(../img/Font.jpeg);
-    // background-repeat: no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
     color: variables.$White;
 }
 
