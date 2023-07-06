@@ -20,7 +20,7 @@ const porfolioHeader = document.querySelector('.porfolio-mobile');
 const contactHeader = document.querySelector('.contact-mobile');
 
 indexHeader.addEventListener('click', () => {
-    location.href = './inicio.html'
+    location.href = './index.html'
 });
 
 aboutHeader.addEventListener('click', () => {
@@ -42,7 +42,7 @@ const porfolioFooter = document.getElementById('porfolio');
 const contactFooter = document.getElementById('contact');
 
 indexFooter.addEventListener('click', () => {
-    location.href = './inicio.html'
+    location.href = './index.html'
 });
 
 aboutFooter.addEventListener('click', () => {
