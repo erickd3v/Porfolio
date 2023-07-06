@@ -1,0 +1,68 @@
+@use 'variables';
+
+.Contact {
+    text-align: center;
+    &_button {
+        display: flex;
+        gap: 2rem;
+        flex-direction: column;
+        font-family: variables.$Font-text;
+        border-bottom: 1px solid variables.$Dark-grayish-blue;
+        padding: 3rem 0;
+    }
+    &_btn {
+        width: 18rem;
+        height: 3rem;
+        border: 5px solid;
+        background-color: transparent;
+        margin: auto;
+        font-size: 18px;
+        letter-spacing: 3px;
+        color: variables.$Border-blue;
+        cursor: pointer;
+        font-weight: 600;
+        @media screen and (min-width: 740px) {
+            width: 20rem;
+            height: 5rem;
+            letter-spacing: 5px;
+        }
+        &-text {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.5s;
+            &:hover {
+                background-color: variables.$Border-blue;
+                color: variables.$White;
+            }
+        }
+    }
+    &_info {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 0;
+        gap: 2rem;
+        @media screen and (min-width:740px) {
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+    }
+}
+
+i.bx-map, i.bxl-gmail {
+    margin: auto;
+    @media screen and (min-width:740px) {
+        display: block;
+    }
+}
+
+.mail {
+    &_text1, &_text2 {
+        cursor: pointer;
+        &:hover {
+            color: variables.$Border-blue;
+        }
+    }
+}

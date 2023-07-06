@@ -1,79 +1,97 @@
-// Cambiar imagenes cuande se precione la flecha
+"use strict";
 
-let thumbails = document.querySelector ('.gallery__thumbails');
-let previusGalleryBtn = document.querySelector ('.gallery__previus');
-let nextGalleryBtn = document.querySelector ('.gallery__next');
-let imgIndex = 1;
+const burggerIcon = document.querySelector('.header__list');
+const navbar = document.querySelector('.modal__navbar');
 
-nextGalleryBtn.addEventListener('click', ()=> {
-    changeNextImage(thumbails);
+window.addEventListener('scroll', () => {
+    const header = document.querySelector('.header');
+    header.classList.toggle('abajo',window.scrollY>0);
+})
+
+
+burggerIcon.addEventListener('click', () => {
+    navbar.classList.toggle('active');
 });
 
-previusGalleryBtn.addEventListener('click', ()=> {
-    changePreviusImage(thumbails);
+// Header
+const indexHeader = document.querySelector('.inicio-mobile');
+const aboutHeader = document.querySelector('.aboutMe-mobile');
+const porfolioHeader = document.querySelector('.porfolio-mobile');
+const contactHeader = document.querySelector('.contact-mobile');
+
+indexHeader.addEventListener('click', () => {
+    location.href = './inicio.html'
 });
 
-// ingresar al link de la imagen mobile
-thumbails.addEventListener('click', function() {
-    if (imgIndex == 1) {
-        location.href = "https://erick150-ymf.github.io/Interative-card/"
-    } else if (imgIndex == 2){
-        location.href = "https://erick150-ymf.github.io/Expense-chart-main/"
-    } else if (imgIndex == 3){
-        location.href = "https://erick150-ymf.github.io/Notifi/"
+aboutHeader.addEventListener('click', () => {
+    location.href = './Erick_Moya.html'
+});
+
+porfolioHeader.addEventListener('click', () => {
+    location.href = './porfolio.html'
+});
+
+contactHeader.addEventListener('click', () => {
+    location.href = '#Contacto'
+});
+
+// Footer
+const indexFooter = document.getElementById('inicio');
+const aboutFooter = document.getElementById('aboutMe');
+const porfolioFooter = document.getElementById('porfolio');
+const contactFooter = document.getElementById('contact');
+
+indexFooter.addEventListener('click', () => {
+    location.href = './inicio.html'
+});
+
+aboutFooter.addEventListener('click', () => {
+    location.href = './Erick_Moya.html'
+});
+
+porfolioFooter.addEventListener('click', () => {
+    location.href = './porfolio.html'
+});
+
+contactFooter.addEventListener('click', () => {
+    location.href = '#Contacto'
+});
+
+//Conact button
+
+const contactBtn = document.querySelector('.Contact_btn');
+
+contactBtn.addEventListener('click', () => {
+    location.href = 'mailto:yusske06@gmail.com'
+});
+
+const mail1 = document.querySelector('.mail_text1');
+const mail2 = document.querySelector('.mail_text2');
+
+mail1.addEventListener('click', () => {
+    location.href = 'mailto:moyae76@gmail.com'
+});
+
+mail2.addEventListener('click', () => {
+    location.href = 'mailto:yusske06@gmail.com'
+});
+
+// redes
+
+const instagram = document.querySelector('.bxl-instagram');
+const github = document.querySelector('.bxl-github');
+const linkedin = document.querySelector('.bxl-linkedin');
+
+instagram.addEventListener('click', redes);
+github.addEventListener('click', redes);
+linkedin.addEventListener('click', redes);
+
+function redes() {
+    if (instagram === true) {
+        location.href= 'https://instagram.com/erick.y.m.f'
+    }else if (github) {
+        location.href = 'https://github.com/Erick150-ymf'
+    } else {
+        location.href = 'https://www.linkedin.com/in/erckmoya/'
     }
-});
-
-// ingresar al link de la imagen desktop
-let thumbailsImage1 = document.getElementById('i1');
-let thumbailsImage2 = document.getElementById('i2');
-let thumbailsImage3 = document.getElementById('i3');
-
-thumbailsImage1.addEventListener('click', function() {
-    location.href = "https://erick150-ymf.github.io/Interative-card/"
-});
-thumbailsImage2.addEventListener('click', function() {
-    location.href = "https://erick150-ymf.github.io/Expense-chart-main/"
-});
-thumbailsImage3.addEventListener('click', function() {
-    location.href = "https://erick150-ymf.github.io/Notifi/"
-});
-
-// Modal navbar
-let openModal = document.querySelector('.header__menu');
-let closeModal = document.querySelector('.modal-navbar__close-icon');
-let modalBackground = document.querySelector('.modal-navbar__background');
-let modal = document.querySelector('.modal-navbar');
-
-openModal.addEventListener('click',() => {
-    modalBackground.style.display = 'block';
-    modal.style.animation = 'abrir 0.5s';
-});
-
-closeModal.addEventListener('click', () => {
-    modalBackground.style.display = 'none';
-    // modal.style.animation = 'cerrar 0.5s' ;
-});
-
-// Animaciones
-new TypeIt(".About__container--description", {
-    strings: "Hola! mi nombre es Erick Moya, soy Frontend Developer Junior como ven me gusta usar los recursos quen encuentro para mejorar mis habilidades como Programador y así optimizar mis proyectos siempre buscando la escalabilidad 😄.",
-}).go();
-
-// Funciones
-function changeNextImage(imgContainer) {
-    if (imgIndex == 3) {
-        imgIndex = 1;
-    }else {
-        imgIndex++;
-    }
-    imgContainer.style.backgroundImage = `url('../img/Projects/Project-${imgIndex}.png')`;
-}
-function changePreviusImage(imgContainer) {
-    if (imgIndex == 1) {
-        imgIndex = 3;
-    }else {
-        imgIndex--;
-    }
-    imgContainer.style.backgroundImage = `url('../img/Projects/Project-${imgIndex}.png')`;
 }

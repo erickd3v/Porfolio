@@ -1,0 +1,51 @@
+@use 'variables';
+
+.Porfolio {
+    text-align: center;
+    padding: 1rem;
+    &_projects {
+        line-height: 3rem;
+    }
+    &_text {
+        width: 80%;
+        margin: auto;
+        height: 5rem;
+        font-family: variables.$Font-text;
+        color: variables.$Gray-text;
+        @media screen and (min-width: 740px) {
+            width: 55%;
+            height: 5rem;
+        }
+    }
+}
+
+.indicadores {
+    line-height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &_text {
+        cursor: pointer;
+        &:hover {
+            border-bottom: 1px solid;
+        }
+    }
+}
+
+.web {
+    &_portada {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        cursor: pointer;
+    }
+    &_project {
+        padding: 1rem 0;
+        display: flex;
+        flex-direction: column;
+        @media screen and (min-width: 740px) {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); // maximo (4, 1fr)
+        }
+    }
+}
