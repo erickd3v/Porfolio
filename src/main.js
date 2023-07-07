@@ -82,16 +82,12 @@ const instagram = document.querySelector('.bxl-instagram');
 const github = document.querySelector('.bxl-github');
 const linkedin = document.querySelector('.bxl-linkedin');
 
-instagram.addEventListener('click', redes);
-github.addEventListener('click', redes);
-linkedin.addEventListener('click', redes);
-
-function redes() {
-    if (instagram === true) {
-        location.href= 'https://instagram.com/erick.y.m.f'
-    }else if (github) {
-        location.href = 'https://github.com/Erick150-ymf'
-    } else {
-        location.href = 'https://www.linkedin.com/in/erckmoya/'
-    }
-}
+instagram.addEventListener('click', () => {
+    location.href= 'https://instagram.com/erick.y.m.f';
+});
+github.addEventListener('click', () => {
+    location.href= 'https://github.com/Erick150-ymf';
+});
+linkedin.addEventListener('click', () => {
+    location.href= 'https://linkedin.com/in/erckmoya';
+});
