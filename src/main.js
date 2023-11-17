@@ -20,7 +20,7 @@ const porfolioHeader = document.querySelector('.porfolio-mobile');
 const contactHeader = document.querySelector('.contact-mobile');
 
 indexHeader.addEventListener('click', () => {
-    location.href = './index.html'
+    location.href = '/'
 });
 
 aboutHeader.addEventListener('click', () => {
@@ -42,7 +42,7 @@ const porfolioFooter = document.getElementById('porfolio');
 const contactFooter = document.getElementById('contact');
 
 indexFooter.addEventListener('click', () => {
-    location.href = './index.html'
+    location.href = '/'
 });
 
 aboutFooter.addEventListener('click', () => {
@@ -83,11 +83,11 @@ const github = document.querySelector('.bxl-github');
 const linkedin = document.querySelector('.bxl-linkedin');
 
 instagram.addEventListener('click', () => {
-    location.href= 'https://instagram.com/erick.y.m.f';
+    location.href= 'https://instagram.com/erick.d3v';
 });
 github.addEventListener('click', () => {
-    location.href= 'https://github.com/Erick150-ymf';
+    location.href= 'https://github.com/erickd3v';
 });
 linkedin.addEventListener('click', () => {
-    location.href= 'https://linkedin.com/in/erckmoya';
+    location.href= 'https://linkedin.com/in/erickd3v';
 });
