@@ -1,0 +1,24 @@
+---
+import ExperienceItems from "./ExperienceItems.astro";
+
+const EXPERIENCE = [
+  {
+    title: "Freelancer & FullStack",
+    date: "03/2024 - present",
+    company: "Senati",
+    description:
+      "Paricipo en el desarrollo del 'Sistema Matrícula SENATI'. Utilizamos metodologías como Test-Driven Development, MVC, Screaming Architecture y Git Flow en un repositorio monolítico.",
+    link: "#",
+  },
+];
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCE.map((exp) => (
+      <li class="">
+        <ExperienceItems {...exp} />
+      </li>
+    ))
+  }
+</ol>

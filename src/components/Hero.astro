@@ -1,0 +1,32 @@
+---
+import Nav from "./Nav.astro";
+
+const imgAlt = "Erick Moya";
+---
+
+<div class="max-w-xl m-auto">
+  <div class="flex gap-4 mb-4">
+    <img
+      class="rounded-full shadow-lg size-24"
+      src="/public/erickd3v.webp"
+      alt={imgAlt}
+    />
+    <div class="flex flex-col justify-center">
+      <span class="inline-flex items-center w-full px-3 py-1 text-3xl"
+        >{imgAlt}</span
+      >
+      <h1 class="text-1xl opacity-75 items-center w-full px-3 py-1">
+        Desarrollador Fullstack
+      </h1>
+    </div>
+  </div>
+  <br />
+  <h2 class="text-2xl font-bold text-wrap">Hola, soy erickdev</h2>
+  <span class="opacity-75">+1 año de experiencia </span>
+  <span class="text-yellow-200/90">Desarrollador Fullstack</span>
+  <span class="opacity-75">
+    de Chimbote, Perú. Enfocado en el desarrollo de aplicaciones web destacadas
+    por su UX/UI</span
+  >
+  <Nav />
+</div>

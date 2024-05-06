@@ -1,0 +1,47 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Experience from "../components/Experience.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Hero from "../components/Hero.astro";
+import Projects from "../components/Projects.astro";
+import Work from "../components/icons/Work.astro";
+import ProfileCheck from "../components/icons/ProfileCheck.astro";
+---
+
+<Layout
+  title="Porfolio de erickdev - Desarrollador y Programador Web"
+  description="¿Buscas crear aplicaciones y páginas web que cautiven a tus usuarios con una experiencia excepcional? ¡erickdev está aquí para ayudarte! Contacta con nosotros y lleva tus ideas a la realidad digital."
+>
+  <main class="px-4">
+    <SectionContainer class="py-16 md:py-36">
+      <Hero>
+        <slot />
+      </Hero>
+    </SectionContainer>
+    <div class="space-y-24">
+      <SectionContainer id="experiencia">
+        <div class="m-auto max-w-xl">
+          <h2
+            class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
+          >
+            <Work class="size-8" />
+            Experiencia Laboral
+          </h2>
+          <Experience />
+        </div>
+      </SectionContainer>
+      <SectionContainer id="proyectos">
+        <div class="m-auto max-w-xl">
+          <h2
+            class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
+          >
+            <ProfileCheck class="size-8" />
+            Proyectos
+          </h2>
+          <Projects />
+        </div>
+      </SectionContainer>
+    </div>
+  </main>
+</Layout>
