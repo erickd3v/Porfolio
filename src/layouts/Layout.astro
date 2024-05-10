@@ -13,36 +13,32 @@ const { description, title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/erickdev.webp" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <ViewTransitions />
   </head>
-  <body class="relative text-black dark:text-white">
-    <!-- <div
-      class="absolute top-0 bottom-0 z-[-2] min-h-screen w-full bg-gray-50 dark:bg-gray-950
-      bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(217,216,255,0.5),rgba(255,255,255,0.9))]
-      dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
-    >
-    </div> -->
+  <body
+    class="relative text-black dark:text-white bg-white/90 dark:bg-gray-800"
+  >
     <Header />
     <slot />
     <style is:global>
       :root {
         color-scheme: light dark;
       }
+
       html {
-        background-color: #000;
         font-family: "Onest Variable", system-ui, sans-serif;
         scroll-behavior: smooth;
       }
+
       body {
-        color: rgba(17, 17, 17, 0.9);
         display: flex;
         flex-direction: column;
         min-height: 100vh;
@@ -52,12 +48,6 @@ const { description, title } = Astro.props;
       @media (prefers-reduced-motion: reduce) {
         html {
           scroll-behavior: auto;
-        }
-      }
-
-      @media (prefers-color-scheme: dark) {
-        body {
-          color: rgba(255, 255, 255, 0.9);
         }
       }
 

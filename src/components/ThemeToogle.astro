@@ -13,11 +13,14 @@ const THEMES = ["Light", "Dark", "System"];
   >
     <span class="sr-only">Elige el tema</span>
     <Light id="light" class="theme-toggle-icon size-5 transition-all" />
-    <Dark id="dark" class="theme-toggle-icon size-5 transition-all" />
-    <System id="system" class="theme-toggle-icon size-5 transition-all" />
+    <Dark id="dark" class="theme-toggle-icon absolute size-5 transition-all" />
+    <System
+      id="system"
+      class="theme-toggle-icon absolute size-5 transition-all"
+    />
   </button>
   <div
-    id="theme-menu"
+    id="themes-menu"
     class="absolute hidden scale-80 top-8 right-0 text-sm p-1 min-w-[8rem] rounded-md border border-gray-100 bg-white/90 dark:bg-gray-900/90 dark:border-gray-500/20 shadow-[0_3px_10px_rgb(0,0,0,0.2)] backdrop-blur-md"
   >
     <ul>
@@ -52,17 +55,12 @@ const THEMES = ["Light", "Dark", "System"];
 
 <script is:inline>
   let remove = null;
-  const matchMedia = window.matchMedia("(prefers-color-scheme: dark)");
   const themesMenu = document.getElementById("themes-menu");
 
   const getThemePreference = () => {
     if (typeof localStorage !== "undefined") {
       return localStorage.getItem("theme") ?? "system";
     }
-
-    return window.matchMedia("(prefers-color-scheme: dark)").matches
-      ? "dark"
-      : "light";
   };
 
   const updateIcon = (themePreference) => {
@@ -75,15 +73,9 @@ const THEMES = ["Light", "Dark", "System"];
     if (remove != null) {
       remove();
     }
-    matchMedia.addEventListener("change", updateTheme);
-    remove = () => {
-      matchMedia.removeEventListener("change", updateTheme);
-    };
 
     const themePreference = getThemePreference();
-    const isDark =
-      themePreference === "dark" ||
-      (themePreference === "system" && matchMedia.matches);
+    const isDark = themePreference === "dark" || themePreference === "system";
 
     updateIcon(themePreference);
     document.documentElement.classList[isDark ? "add" : "remove"]("dark");

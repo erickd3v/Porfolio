@@ -1,0 +1,9 @@
+---
+const { blog } = Astro.props;
+---
+
+<div class="h-full w-10 m-4 flex-shrink-0 cursor-default">
+  <div class="overflow-hidden mb-4 relative">
+    <img src={`/languages/${blog.name}.svg`} alt={blog.name} />
+  </div>
+</div>

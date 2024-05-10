@@ -1,12 +1,16 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
-import Experience from "../components/Experience.astro";
-import SectionContainer from "../components/SectionContainer.astro";
+
 import Hero from "../components/Hero.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Experience from "../components/Experience.astro";
+import Carrousel from "../components/Carrousel.astro";
 import Projects from "../components/Projects.astro";
+import AboutMe from "../components/AboutMe.astro";
+
 import Work from "../components/icons/Work.astro";
 import ProfileCheck from "../components/icons/ProfileCheck.astro";
+import CodeIcon from "../components/icons/Code.astro";
 ---
 
 <Layout
@@ -14,10 +18,11 @@ import ProfileCheck from "../components/icons/ProfileCheck.astro";
   description="¿Buscas crear aplicaciones y páginas web que cautiven a tus usuarios con una experiencia excepcional? ¡erickdev está aquí para ayudarte! Contacta con nosotros y lleva tus ideas a la realidad digital."
 >
   <main class="px-4">
-    <SectionContainer class="py-16 md:py-36">
+    <SectionContainer class="pt-16 pb-8 md:pt-36 md:pb-16 gap-20 flex flex-col">
       <Hero>
         <slot />
       </Hero>
+      <Carrousel />
     </SectionContainer>
     <div class="space-y-24">
       <SectionContainer id="experiencia">
@@ -36,10 +41,21 @@ import ProfileCheck from "../components/icons/ProfileCheck.astro";
           <h2
             class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
           >
-            <ProfileCheck class="size-8" />
+            <CodeIcon class="size-8" />
             Proyectos
           </h2>
           <Projects />
+        </div>
+      </SectionContainer>
+      <SectionContainer id="sobre-mi">
+        <div class="m-auto max-w-xl">
+          <h2
+            class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
+          >
+            <ProfileCheck class="size-8" />
+            Sobre mí
+          </h2>
+          <AboutMe />
         </div>
       </SectionContainer>
     </div>

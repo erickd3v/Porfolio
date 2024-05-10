@@ -1,0 +1,27 @@
+---
+import CardItem from "./CardItem.astro";
+import { data } from "./ImageData.astro";
+const CContent = [...data, ...data];
+---
+
+<div class="max-w-xl m-auto">
+  <div class="overflow-hidden w-full">
+    <div class="flex whitespace-nowrap animate-scroll">
+      {CContent.map((blog) => <CardItem blog={blog} />)}
+    </div>
+  </div>
+</div>
+
+<style is:inline>
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-40px * 7 - 1rem * 14));
+    }
+  }
+  .animate-scroll {
+    animation: scroll 13s linear infinite;
+  }
+</style>
